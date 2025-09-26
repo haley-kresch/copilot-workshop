@@ -1,4 +1,4 @@
-package demo;
+package extra;
 
 public class Factorial {
     // Buggy implementation for demo purposes
