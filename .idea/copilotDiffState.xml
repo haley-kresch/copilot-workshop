@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/main/java/demo/Clarity.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/demo/Clarity.java" />
+              <option name="originalContent" value="package demo;&#10;&#10;import java.util.List;&#10;&#10;/**&#10; * Clarity&#10; *&#10; * This class is designed for practicing prompt engineering skills&#10; * (Clarity &amp; Specificity) with GitHub Copilot in IntelliJ.&#10; *&#10; * ➡️ Clarity = Unambiguous instructions&#10; * ➡️ Specificity = Context + Format + Constraints&#10; *&#10; * Think of your prompts as API specifications:&#10; * - Precise inputs → Predictable outputs&#10; */&#10;public class Clarity {&#10;&#10;    private String studentName;&#10;&#10;    public Clarity(String studentName) {&#10;        this.studentName = studentName;&#10;    }&#10;&#10;    public void greet() {&#10;        System.out.println(&quot;Hello, &quot; + studentName + &quot;!&quot;);&#10;    }&#10;&#10;    public static void main(String[] args) {&#10;        Clarity test = new Clarity(&quot;Student&quot;);&#10;        test.greet();&#10;&#10;        // After generating new methods with Copilot,&#10;        // call and test them here with sample inputs.&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package demo;&#10;&#10;import java.util.List;&#10;&#10;/**&#10; * Clarity&#10; *&#10; * This class is designed for practicing prompt engineering skills&#10; * (Clarity &amp; Specificity) with GitHub Copilot in IntelliJ.&#10; *&#10; * ➡️ Clarity = Unambiguous instructions&#10; * ➡️ Specificity = Context + Format + Constraints&#10; *&#10; * Think of your prompts as API specifications:&#10; * - Precise inputs → Predictable outputs&#10; */&#10;public class Clarity {&#10;&#10;    private String studentName;&#10;&#10;    public Clarity(String studentName) {&#10;        this.studentName = studentName;&#10;    }&#10;&#10;    public void greet() {&#10;        System.out.println(&quot;Hello, &quot; + studentName + &quot;!&quot;);&#10;    }&#10;&#10;    public static void main(String[] args) {&#10;        Clarity test = new Clarity(&quot;Student&quot;);&#10;        test.greet();&#10;&#10;        // After generating new methods with Copilot,&#10;        // call and test them here with sample inputs.&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

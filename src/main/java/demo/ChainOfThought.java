@@ -18,30 +18,6 @@ import java.util.Arrays;
  */
 public class ChainOfThought {
 
-    /**
-     * TODO Exercise 1:
-     * Give a vague prompt.
-     * Example: "Add a method to calculate factorial."
-     * ➡️ Observe: Copilot may only return the result, no reasoning.
-     */
-
-    /**
-     * TODO Exercise 2:
-     * Add clarity by asking for reasoning.
-     * Example: "Add a method computeFactorialWithSteps(int n) that:
-     *   - Prints each multiplication step
-     *   - Returns the final result"
-     */
-
-    /**
-     * TODO Exercise 3:
-     * Use full chain-of-thought prompting.
-     * Example: "Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
-     *   - Explains discriminant calculation step by step
-     *   - Shows intermediate values
-     *   - Returns an array of roots (or empty if complex)"
-     */
-
     // Example starter method to show testing format
     public static void demoSteps() {
         System.out.println("Step 1: Start with a simple example");
@@ -52,7 +28,7 @@ public class ChainOfThought {
     public static void main(String[] args) {
         demoSteps();
 
-        // TODO: After generating methods with Copilot, test them here.
+        // After generating methods with Copilot, test them here.
         // Example (after generating factorial with steps):
         // System.out.println(computeFactorialWithSteps(5));
         //
@@ -61,4 +37,3 @@ public class ChainOfThought {
         // System.out.println("Roots: " + Arrays.toString(roots));
     }
 }
-

@@ -27,24 +27,6 @@ public class FewShot {
      *   "US" → "United States"
      *   "FR" → "France"
      *   "JP" → "Japan"
-     *
-     * TODO Exercise 1:
-     * Prompt Copilot with just one vague example.
-     * Example: "Add a method to map 'US' → 'United States'."
-     * ➡️ Observe: Copilot may not generalize well.
-     *
-     * TODO Exercise 2:
-     * Add 2–5 examples with consistent formatting.
-     * Example: "Add a method that maps:
-     *   'US' → 'United States'
-     *   'FR' → 'France'
-     *   'JP' → 'Japan'
-     * Then extend the mapping for other codes."
-     *
-     * TODO Exercise 3:
-     * Avoid contradictions.
-     * Example: Don't include both "US → United States"
-     * and "US → America" in the same set.
      */
     private static final Map<String, String> FEW_SHOT_EXAMPLES = new HashMap<String, String>() {{
         put("US", "United States");
@@ -52,13 +34,13 @@ public class FewShot {
         put("JP", "Japan");
     }};
 
-    // TODO: Ask Copilot to generate a method based on the few-shot examples,
+    // Ask Copilot to generate a method based on the few-shot examples,
     // e.g., lookupCountryName(String code).
 
     public static void main(String[] args) {
         System.out.println("Few-shot examples: " + FEW_SHOT_EXAMPLES);
 
-        // TODO: After generating the lookup method with Copilot, test it here.
+        // After generating the lookup method with Copilot, test it here.
         // Example (after generation):
         // System.out.println(lookupCountryName("US")); // United States
         // System.out.println(lookupCountryName("FR")); // France

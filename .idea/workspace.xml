@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2166959e-b4e3-4026-92aa-9b529ef93f52" name="Changes" comment="Resolve merge conflicts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/ChainOfThought.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/Clarity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/FewShot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/IterativeRefinement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/NegativePrompting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/RolePrompting.java" afterDir="false" />
+    <list default="true" id="2166959e-b4e3-4026-92aa-9b529ef93f52" name="Changes" comment="quite a large refactor">
+      <change afterPath="$PROJECT_DIR$/PROMPT_EXERCISES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extra/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/DemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extra/DemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extra/Factorial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extra/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/ChainOfThought.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/ChainOfThought.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Clarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Clarity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/FewShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/FewShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/IterativeRefinement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/IterativeRefinement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/NegativePrompting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/NegativePrompting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/RolePrompting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/RolePrompting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758880210040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="quite a large refactor">
+      <option name="closed" value="true" />
+      <created>1758888390219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758888390219</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +184,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add prompting demo" />
     <MESSAGE value="Resolve merge conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve merge conflicts" />
+    <MESSAGE value="quite a large refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="quite a large refactor" />
   </component>
 </project>

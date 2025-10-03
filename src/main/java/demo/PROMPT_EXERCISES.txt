@@ -1,0 +1,163 @@
+# Prompt Engineering Exercises
+
+This file contains all the prompt engineering exercises extracted from the demo classes. For each exercise, refer to the specified Java class in the `demo` package.
+
+---
+
+## Clarity.java
+
+**Exercise 1:**
+Give Copilot a vague prompt and observe results.
+Example: "Add a method that works with numbers."
+
+**Exercise 2:**
+Refine the same idea with clarity.
+Example: "Add a method that takes a list of integers and returns the sum as an int."
+
+**Exercise 3:**
+Now add specificity (context, format, constraints).
+Example: "Add a static method named calculateAverage(List<Integer> numbers) that:
+  - Returns 0.0 if the list is null or empty
+  - Uses Java Streams for the calculation
+  - Includes JavaDoc with @param and @return tags
+  - Has no side effects"
+
+---
+
+## Context.java
+
+**Exercise 1:**
+Give Copilot a minimal, vague context.
+Example: "Add a method to process scores."
+Observe: Copilot may generate many different interpretations.
+
+**Exercise 2:**
+Add explicit CONTEXT (domain, audience, task).
+Example: "Add a method for teachers that calculates the class average from a list of student scores."
+
+**Exercise 3:**
+Add both CONTEXT + BACKGROUND (data, assumptions, prior steps).
+Example: "Add a static method named calculatePassRate(List<Integer> scores) that:
+  - Uses a passing threshold of 70
+  - Returns a double between 0.0 and 1.0 representing the ratio of students passing
+  - Assumes scores are integers between 0 and 100
+  - Includes JavaDoc with @param and @return
+  - Has deterministic, testable behavior"
+
+---
+
+## RolePrompting.java
+
+**Exercise 1:**
+Vague prompt (no role given).
+Example: "Add a method to check these logs."
+Observe: Copilot may give generic or unfocused output.
+
+**Exercise 2:**
+Add a ROLE prompt for more control.
+Example: "You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
+  - Scans logs for lines containing 'ERROR'
+  - Returns them as a List<String>
+  - Handles null/empty lists gracefully"
+
+**Exercise 3:**
+Explore other roles and tasks:
+- "You are a Java code reviewer. Suggest improvements for readability."
+- "You are a technical writer. Document this method with clear JavaDoc."
+- "You are a security engineer. Review this code for vulnerabilities."
+Compare tone, style, and domain-specific relevance in each case.
+
+---
+
+## FewShot.java
+
+**Exercise 1:**
+Prompt Copilot with just one vague example.
+Example: "Add a method to map 'US' → 'United States'."
+Observe: Copilot may not generalize well.
+
+**Exercise 2:**
+Add 2–5 examples with consistent formatting.
+Example: "Add a method that maps:
+  'US' → 'United States'
+  'FR' → 'France'
+  'JP' → 'Japan'
+Then extend the mapping for other codes."
+
+**Exercise 3:**
+Avoid contradictions.
+Example: Don't include both "US → United States" and "US → America" in the same set.
+
+---
+
+## ChainOfThought.java
+
+**Exercise 1:**
+Give a vague prompt.
+Example: "Add a method to calculate factorial."
+Observe: Copilot may only return the result, no reasoning.
+
+**Exercise 2:**
+Add clarity by asking for reasoning.
+Example: "Add a method computeFactorialWithSteps(int n) that:
+  - Prints each multiplication step
+  - Returns the final result"
+
+**Exercise 3:**
+Use full chain-of-thought prompting.
+Example: "Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
+  - Explains discriminant calculation step by step
+  - Shows intermediate values
+  - Returns an array of roots (or empty if complex)"
+
+---
+
+## IterativeRefinement.java
+
+**Exercise 1 (vague):**
+Prompt: "Add a method to generate a simple report from scores."
+Observe: Copilot may produce a single draft without refinements.
+
+**Exercise 2 (clear):**
+Prompt: "Add a method generateDraftReport(List<Integer> scores)
+  - Shows student count, average, min, max, and all scores"
+
+**Exercise 3 (iterative refinement):**
+Prompt: "Add a method refineReport(String draft, String feedback, List<Integer> scores)
+  - Applies one small, deterministic change per feedback round
+  - Examples:
+      - 'Add pass rate' → append pass rate with threshold 70
+      - 'Make concise' → return a single-line summary
+      - 'Return JSON' → convert report to JSON"
+
+**Exercise 4 (advanced / code review simulation):**
+Prompt: "Add a method iterativeRefinement(List<Integer> scores, List<String> feedbackRounds)
+  - Returns a history of drafts after each feedback
+  - Shows changes applied step by step"
+
+---
+
+## NegativePrompting.java
+
+**Exercise 1 (vague):**
+Prompt: "Add a method to generate a report from scores."
+Observe: Copilot may include unwanted formatting, comments, or redundant info.
+
+**Exercise 2 (positive guidance):**
+Prompt: "Add a method generateReport(List<Integer> scores)
+  - Include student count, average, min, and max
+  - Format clearly for managers"
+
+**Exercise 3 (negative prompting):**
+Prompt: "Modify generateReport so it avoids:
+  - Using abbreviations like 'avg' or 'cnt'
+  - Printing unnecessary debug info
+  - Including raw lists of scores unless requested
+  - Adding redundant explanations"
+
+**Exercise 4 (combined prompting):**
+Prompt: "Generate documentation for the report method:
+  - Use clear JavaDoc
+  - Avoid verbose language and subjective opinions
+  - Include only parameters and return value explanation"
+

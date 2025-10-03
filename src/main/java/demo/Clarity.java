@@ -26,30 +26,6 @@ public class Clarity {
         System.out.println("Hello, " + studentName + "!");
     }
 
-    /**
-     * TODO Exercise 1:
-     * Give Copilot a vague prompt and observe results.
-     * Example: "Add a method that works with numbers."
-     */
-
-    /**
-     * TODO Exercise 2:
-     * Refine the same idea with clarity.
-     * Example: "Add a method that takes a list of integers
-     * and returns the sum as an int."
-     */
-
-    /**
-     * TODO Exercise 3:
-     * Now add specificity (context, format, constraints).
-     * Example: "Add a static method named calculateAverage(List<Integer> numbers)
-     * that:
-     *   - Returns 0.0 if the list is null or empty
-     *   - Uses Java Streams for the calculation
-     *   - Includes JavaDoc with @param and @return tags
-     *   - Has no side effects"
-     */
-
     public static void main(String[] args) {
         Clarity test = new Clarity("Student");
         test.greet();
