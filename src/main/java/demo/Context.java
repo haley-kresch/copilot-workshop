@@ -29,9 +29,5 @@ public class Context {
         // Starter output
         System.out.println("Sample scores: " + SAMPLE_SCORES);
 
-        // After generating methods with Copilot, test them here.
-        // Example (after generating calculatePassRate):
-        // double passRate = calculatePassRate(SAMPLE_SCORES);
-        // System.out.println("Pass Rate: " + passRate);
     }
 }

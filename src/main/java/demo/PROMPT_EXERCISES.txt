@@ -6,158 +6,326 @@ This file contains all the prompt engineering exercises extracted from the demo 
 
 ## Clarity.java
 
-**Exercise 1:**
-Give Copilot a vague prompt and observe results.
-Example: "Add a method that works with numbers."
+Exercise 1 — Vague Prompt (Low Clarity)
+---------------------------------------
+Give Copilot a vague instruction related to the existing class.
 
-**Exercise 2:**
-Refine the same idea with clarity.
-Example: "Add a method that takes a list of integers and returns the sum as an int."
+Example prompt:
+    Add a method that works with the student name.
 
-**Exercise 3:**
-Now add specificity (context, format, constraints).
-Example: "Add a static method named calculateAverage(List<Integer> numbers) that:
-  - Returns 0.0 if the list is null or empty
-  - Uses Java Streams for the calculation
-  - Includes JavaDoc with @param and @return tags
-  - Has no side effects"
+Observe:
+- What kind of method does Copilot generate?
+
+(You don’t need to keep this version — the goal is to see how ambiguity leads to unpredictable results.)
+
+
+Exercise 2 — Add Clarity
+-------------------------
+Refine your prompt to be unambiguous about inputs, outputs, and purpose, while still simple.
+
+Example prompt:
+    Add a method named createPersonalGreeting that returns a String message saying
+    'Welcome, <studentName>!' without printing anything.
+
+
+(Now you’ll see how clear instructions produce a predictable, reusable method.)
+
+
+Exercise 3 — Add Specificity (Context + Format + Constraints)
+-------------------------------------------------------------
+Now make your prompt fully specific — include constraints, formatting details, and style.
+
+Example prompt:
+    Add a static method named summarizeGreetings(List<Clarity> students) that:
+      - Returns a single String with all students’ names joined by commas
+      - Returns 'No students found' if the list is null or empty
+      - Uses Java Streams for the operation
+      - Includes JavaDoc with @param and @return tags
+      - Has no side effects (no printing to console)
 
 ---
 
 ## Context.java
 
-**Exercise 1:**
-Give Copilot a minimal, vague context.
-Example: "Add a method to process scores."
-Observe: Copilot may generate many different interpretations.
+Exercise 1 — Minimal Context (Vague)
+------------------------------------
+Give Copilot almost no context so it must infer your intent.
 
-**Exercise 2:**
-Add explicit CONTEXT (domain, audience, task).
-Example: "Add a method for teachers that calculates the class average from a list of student scores."
+Example prompt:
+    Add a method to process scores.
 
-**Exercise 3:**
-Add both CONTEXT + BACKGROUND (data, assumptions, prior steps).
-Example: "Add a static method named calculatePassRate(List<Integer> scores) that:
-  - Uses a passing threshold of 70
-  - Returns a double between 0.0 and 1.0 representing the ratio of students passing
-  - Assumes scores are integers between 0 and 100
-  - Includes JavaDoc with @param and @return
-  - Has deterministic, testable behavior"
+Observe:
+- What kind of method does Copilot create? (Does it sort, print, average, or transform?)
+
+Goal:
+Recognize how lack of context leads to unpredictable or inconsistent results.
+
+
+Exercise 2 — Add Explicit Context
+---------------------------------
+Now add clear information about the domain (education), audience (teachers), and task.
+
+Example prompt:
+    Add a method for teachers that calculates the class average from a list of student scores.
+
+Goal:
+See how adding domain and task context guides Copilot toward a consistent and relevant solution.
+
+
+Exercise 3 — Add Context + Background
+-------------------------------------
+Finally, make your prompt fully explicit — include background data, assumptions, and constraints.
+
+Example prompt:
+    Add a static method named calculatePassRate(List<Integer> scores) that:
+      - Uses a passing threshold of 70
+      - Returns a double between 0.0 and 1.0 representing the ratio of students passing
+      - Assumes scores are integers between 0 and 100
+      - Includes JavaDoc with @param and @return tags
+      - Has deterministic, testable behavior (no randomness or side effects)
+
+Goal:
+Observe how adding explicit CONTEXT (domain, purpose) and BACKGROUND (data, assumptions)
+enables Copilot to produce precise, verifiable code.
 
 ---
 
 ## RolePrompting.java
 
-**Exercise 1:**
-Vague prompt (no role given).
-Example: "Add a method to check these logs."
-Observe: Copilot may give generic or unfocused output.
+Exercise 1 — No Role (Vague Prompt)
+-----------------------------------
+Start by giving Copilot a prompt with no defined role or context.
 
-**Exercise 2:**
-Add a ROLE prompt for more control.
-Example: "You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
-  - Scans logs for lines containing 'ERROR'
-  - Returns them as a List<String>
-  - Handles null/empty lists gracefully"
+Example prompt:
+    Add a method to check these logs.
 
-**Exercise 3:**
-Explore other roles and tasks:
-- "You are a Java code reviewer. Suggest improvements for readability."
-- "You are a technical writer. Document this method with clear JavaDoc."
-- "You are a security engineer. Review this code for vulnerabilities."
-Compare tone, style, and domain-specific relevance in each case.
+Observe:
+- What kind of method does Copilot generate?
+- Does it correctly infer what "check" means (validate, filter, or analyze)?
+- How relevant is the output to a Java logging use case?
+
+Goal:
+Notice how the absence of a role leads to generic or unfocused behavior.
+
+
+Exercise 2 — Add a Role (Guided Context)
+----------------------------------------
+Now specify a professional role to influence Copilot’s reasoning and style.
+
+Example prompt:
+    You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
+      - Scans logs for lines containing 'ERROR'
+      - Returns them as a List<String>
+      - Handles null or empty lists gracefully
+
+Goal:
+Observe how defining a role improves focus, tone, and technical quality.
+
+
+Exercise 3 — Explore Other Roles
+--------------------------------
+Experiment with different professional perspectives to see how each shapes Copilot’s response.
+
+Example prompts:
+    You are a Java code reviewer. Suggest improvements for readability.
+    You are a technical writer. Document this method with clear JavaDoc.
+    You are a security engineer. Review this code for vulnerabilities.
+
+Goal:
+Recognize how role-based prompting creates domain-specific outputs —
+from code reviews and documentation to security-focused insights.
 
 ---
 
 ## FewShot.java
 
-**Exercise 1:**
-Prompt Copilot with just one vague example.
-Example: "Add a method to map 'US' → 'United States'."
-Observe: Copilot may not generalize well.
+Exercise 1 — Single Example (Vague)
+-----------------------------------
+Prompt Copilot with just one minimal example.
 
-**Exercise 2:**
-Add 2–5 examples with consistent formatting.
-Example: "Add a method that maps:
-  'US' → 'United States'
-  'FR' → 'France'
-  'JP' → 'Japan'
-Then extend the mapping for other codes."
+Example prompt:
+    Add a method to map 'US' → 'United States'.
 
-**Exercise 3:**
-Avoid contradictions.
-Example: Don't include both "US → United States" and "US → America" in the same set.
+Observe:
+- How well does Copilot generalize from a single example?
+- Does it infer other mappings automatically?
+- Are the naming and structure consistent with your expectations?
+
+
+Exercise 2 — Multiple Consistent Examples
+-----------------------------------------
+Provide several examples with clear, consistent formatting to guide Copilot’s pattern recognition.
+
+Example prompt:
+    Add a method that maps:
+      'US' → 'United States'
+      'FR' → 'France'
+      'JP' → 'Japan'
+    Then extend the mapping for other codes.
+
+Observe:
+- Does Copilot infer the pattern correctly?
+- Does it format the code consistently?
+- How does it handle additional examples or edge cases?
 
 ---
 
 ## ChainOfThought.java
 
-**Exercise 1:**
-Give a vague prompt.
-Example: "Add a method to calculate factorial."
-Observe: Copilot may only return the result, no reasoning.
+Exercise 1 — Vague Prompt
+-------------------------
+Give Copilot a minimal, vague instruction.
 
-**Exercise 2:**
-Add clarity by asking for reasoning.
-Example: "Add a method computeFactorialWithSteps(int n) that:
-  - Prints each multiplication step
-  - Returns the final result"
+Example prompt:
+    Add a method to calculate factorial.
 
-**Exercise 3:**
-Use full chain-of-thought prompting.
-Example: "Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
-  - Explains discriminant calculation step by step
-  - Shows intermediate values
-  - Returns an array of roots (or empty if complex)"
+Observe:
+- Copilot may only return the final result with no explanation.
+- Note whether it chooses an iterative or recursive approach.
+- Check how it handles edge cases (n == 0, negative n) — are they addressed?
+
+
+Exercise 2 — Ask for Reasoning (Clarity)
+----------------------------------------
+Make the prompt explicit about wanting step-by-step output.
+
+Example prompt:
+    Add a method computeFactorialWithSteps(int n) that:
+      - Prints each multiplication step
+      - Returns the final result
+
+Observe:
+- Does Copilot include the requested step-printing and still return the correct value?
+- Does the implementation mix side effects and return values cleanly or awkwardly?
+- Verify behavior on small and boundary inputs (0, 1, negative numbers).
+
+
+Exercise 3 — Full Explanation / Chain-of-Thought Style
+-----------------------------------------------------
+Request detailed, intermediate explanation and visible calculations.
+
+Example prompt:
+    Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
+      - Explains discriminant calculation step by step
+      - Shows intermediate values (discriminant, sqrt, numerator/denominator)
+      - Returns an array of real roots (empty array if roots are complex)
+
+Observe:
+- Is the explanation produced as console output, comments, or both?
+- Are intermediate values computed and displayed accurately?
+- How does Copilot handle complex roots or invalid input (a == 0)?
+- Note whether the explanations are precise enough to be unit-tested or if they’re informal.
 
 ---
 
 ## IterativeRefinement.java
 
-**Exercise 1 (vague):**
-Prompt: "Add a method to generate a simple report from scores."
-Observe: Copilot may produce a single draft without refinements.
 
-**Exercise 2 (clear):**
-Prompt: "Add a method generateDraftReport(List<Integer> scores)
-  - Shows student count, average, min, max, and all scores"
+Exercise 1 — Vague Prompt
+-------------------------
+Prompt:
+    Add a method to generate a simple report from scores.
 
-**Exercise 3 (iterative refinement):**
-Prompt: "Add a method refineReport(String draft, String feedback, List<Integer> scores)
-  - Applies one small, deterministic change per feedback round
-  - Examples:
-      - 'Add pass rate' → append pass rate with threshold 70
-      - 'Make concise' → return a single-line summary
-      - 'Return JSON' → convert report to JSON"
+Observe:
+- Copilot may produce a single draft with minimal structure.
+- It may not refine formatting, handle edge cases, or produce consistent outputs.
+- Note whether it prints the report or returns a String, and how it formats the content.
 
-**Exercise 4 (advanced / code review simulation):**
-Prompt: "Add a method iterativeRefinement(List<Integer> scores, List<String> feedbackRounds)
-  - Returns a history of drafts after each feedback
-  - Shows changes applied step by step"
+
+Exercise 2 — Clear Prompt
+-------------------------
+Prompt:
+    Add a method generateDraftReport(List<Integer> scores) that:
+      - Shows student count, average, min, max, and all scores
+
+Observe:
+- Does Copilot include null/empty handling and clear return semantics?
+- How are numbers formatted (precision, rounding)?
+- Is the output stable and consistent across runs?
+
+
+Exercise 3 — Iterative Refinement
+---------------------------------
+Prompt:
+    Add a method refineReport(String draft, String feedback, List<Integer> scores) that:
+      - Applies one small, deterministic change per feedback round
+      - Examples:
+          - 'Add pass rate' → append pass rate with threshold 70
+          - 'Make concise' → return a single-line summary
+          - 'Return JSON' → convert report to JSON
+
+Observe:
+- Does each feedback produce a single, clear change?
+- Is behavior deterministic and testable (no randomness or hidden state)?
+- How does it handle ambiguous, conflicting, or unsupported feedback?
+
+
+Exercise 4 — Advanced / Code Review Simulation
+---------------------------------------------
+Prompt:
+    Add a method iterativeRefinement(List<Integer> scores, List<String> feedbackRounds) that:
+      - Returns a history of drafts after each feedback
+      - Shows changes applied step by step
+
+Observe:
+- Is the history easy to inspect (human-readable diffs, numbered drafts, or timestamps)?
+- Does Copilot preserve prior drafts or overwrite them?
+- Can each refinement step be unit-tested independently?
 
 ---
 
 ## NegativePrompting.java
 
-**Exercise 1 (vague):**
-Prompt: "Add a method to generate a report from scores."
-Observe: Copilot may include unwanted formatting, comments, or redundant info.
 
-**Exercise 2 (positive guidance):**
-Prompt: "Add a method generateReport(List<Integer> scores)
-  - Include student count, average, min, and max
-  - Format clearly for managers"
+Exercise 1 — Vague Prompt
+-------------------------
+Prompt:
+    Add a method to generate a report from scores.
 
-**Exercise 3 (negative prompting):**
-Prompt: "Modify generateReport so it avoids:
-  - Using abbreviations like 'avg' or 'cnt'
-  - Printing unnecessary debug info
-  - Including raw lists of scores unless requested
-  - Adding redundant explanations"
+Observe:
+- Copilot may include unwanted formatting, excessive comments, or redundant information.
+- Output may mix return values and printing inconsistently.
+- Note whether it produces a clean, professional report format.
 
-**Exercise 4 (combined prompting):**
-Prompt: "Generate documentation for the report method:
-  - Use clear JavaDoc
-  - Avoid verbose language and subjective opinions
-  - Include only parameters and return value explanation"
+
+Exercise 2 — Positive Guidance
+-------------------------------
+Prompt:
+    Add a method generateReport(List<Integer> scores) that:
+      - Includes student count, average, min, and max
+      - Formats clearly for managers
+
+Observe:
+- Does Copilot follow formatting guidance and present results clearly?
+- Are numeric calculations correct and consistent?
+- Check for readability and structure of the report.
+
+
+Exercise 3 — Negative Prompting
+-------------------------------
+Prompt:
+    Modify generateReport so it avoids:
+      - Using abbreviations like 'avg' or 'cnt'
+      - Printing unnecessary debug info
+      - Including raw lists of scores unless requested
+      - Adding redundant explanations
+
+Observe:
+- Does Copilot correctly suppress undesired elements?
+- Are instructions followed precisely without introducing new errors?
+- Note how negative prompts affect style and content focus.
+
+
+Exercise 4 — Combined Prompting
+-------------------------------
+Prompt:
+    Generate documentation for the report method:
+      - Use clear JavaDoc
+      - Avoid verbose language and subjective opinions
+      - Include only parameters and return value explanation
+
+Observe:
+- Is the documentation concise and accurate?
+- Does Copilot follow the combination of positive and negative guidance?
+- Are @param and @return tags clear and complete?
 

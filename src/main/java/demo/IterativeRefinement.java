@@ -28,15 +28,5 @@ public class IterativeRefinement {
         String draft = generateDraftReport(SAMPLE_SCORES);
         System.out.println("Initial draft:\n" + draft + "\n");
 
-        // Example feedback rounds
-        List<String> feedbackRounds = Arrays.asList(
-                "Add pass rate",
-                "Make concise",
-                "Return JSON"
-        );
-
-        // Use Copilot to implement iterativeRefinement that applies each feedback round
-        System.out.println("Feedback rounds (to refine draft): " + feedbackRounds);
-        System.out.println("Run iterativeRefinement(...) after implementing with Copilot.");
     }
 }

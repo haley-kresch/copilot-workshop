@@ -25,12 +25,6 @@ public class RolePrompting {
     }
 
     public static void main(String[] args) {
-        RolePrompting roleDemo = new RolePrompting(
-                Arrays.asList("INFO: Deployment started",
-                        "ERROR: Database connection failed",
-                        "INFO: Retrying..."));
 
-        // After generating role-based methods with Copilot,
-        // call them here and inspect the outputs.
     }
 }

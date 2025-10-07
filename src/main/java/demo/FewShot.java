@@ -20,30 +20,14 @@ import java.util.HashMap;
  */
 public class FewShot {
 
-    /**
-     * Example: Converting country codes to country names.
-     *
-     * FEW-SHOT EXAMPLES (Input → Output):
-     *   "US" → "United States"
-     *   "FR" → "France"
-     *   "JP" → "Japan"
-     */
     private static final Map<String, String> FEW_SHOT_EXAMPLES = new HashMap<String, String>() {{
         put("US", "United States");
         put("FR", "France");
         put("JP", "Japan");
     }};
 
-    // Ask Copilot to generate a method based on the few-shot examples,
-    // e.g., lookupCountryName(String code).
-
     public static void main(String[] args) {
         System.out.println("Few-shot examples: " + FEW_SHOT_EXAMPLES);
 
-        // After generating the lookup method with Copilot, test it here.
-        // Example (after generation):
-        // System.out.println(lookupCountryName("US")); // United States
-        // System.out.println(lookupCountryName("FR")); // France
-        // System.out.println(lookupCountryName("DE")); // ?? (Copilot should guess or extend)
     }
 }

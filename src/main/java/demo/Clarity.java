@@ -22,6 +22,8 @@ public class Clarity {
         this.studentName = studentName;
     }
 
+
+
     public void greet() {
         System.out.println("Hello, " + studentName + "!");
     }
@@ -29,8 +31,5 @@ public class Clarity {
     public static void main(String[] args) {
         Clarity test = new Clarity("Student");
         test.greet();
-
-        // After generating new methods with Copilot,
-        // call and test them here with sample inputs.
     }
 }

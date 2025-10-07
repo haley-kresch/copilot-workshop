@@ -28,12 +28,5 @@ public class ChainOfThought {
     public static void main(String[] args) {
         demoSteps();
 
-        // After generating methods with Copilot, test them here.
-        // Example (after generating factorial with steps):
-        // System.out.println(computeFactorialWithSteps(5));
-        //
-        // Example (after generating quadratic solver):
-        // double[] roots = solveQuadraticWithExplanation(1, -3, 2);
-        // System.out.println("Roots: " + Arrays.toString(roots));
     }
 }

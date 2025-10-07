@@ -28,15 +28,5 @@ public class NegativePrompting {
         String draft = generateReport(SAMPLE_SCORES);
         System.out.println("Initial draft:\n" + draft + "\n");
 
-        // Example feedback: negative prompting guidance
-        List<String> negativeGuidance = Arrays.asList(
-                "Avoid abbreviations like 'avg' or 'cnt'",
-                "Do not include raw scores",
-                "Avoid verbose explanations"
-        );
-
-        // Ask Copilot to implement refineReportWithNegativePrompt(String draft, List<String> guidance)
-        System.out.println("Negative guidance (to refine draft): " + negativeGuidance);
-        System.out.println("After implementing, run refineReportWithNegativePrompt(...) to apply restrictions.");
     }
 }
