@@ -1,4 +1,4 @@
-package demo;
+package demo.Task8;
 
 /**
  * SimpleDebugging
