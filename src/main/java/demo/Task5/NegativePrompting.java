@@ -20,9 +20,6 @@ public class NegativePrompting {
 
 
     public static void main(String[] args) {
-        // Initial draft
-        String draft = generateReport(SAMPLE_SCORES);
-        System.out.println("Initial draft:\n" + draft + "\n");
 
     }
 }

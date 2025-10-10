@@ -21,8 +21,5 @@ public class IterativeRefinement {
 
     public static void main(String[] args) {
         // Generate initial draft
-        String draft = generateDraftReport(SAMPLE_SCORES);
-        System.out.println("Initial draft:\n" + draft + "\n");
-
     }
 }
