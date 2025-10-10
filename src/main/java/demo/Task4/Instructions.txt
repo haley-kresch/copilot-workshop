@@ -1,0 +1,39 @@
+
+## IterativeRefinement.java
+
+
+Exercise 1 — Vague Prompt
+-------------------------
+Prompt:
+    Add a method to generate a simple report from scores.
+
+Observe:
+- Copilot may produce a single draft with minimal structure.
+- It may not refine formatting, handle edge cases, or produce consistent outputs.
+- Note whether it prints the report or returns a String, and how it formats the content.
+
+
+Exercise 2 — Clear Prompt
+-------------------------
+Prompt:
+    Add a method generateDraftReport(List<Integer> scores) that:
+      - Shows student count, average, min, max, and all scores
+
+Observe:
+- Does Copilot include null/empty handling and clear return semantics?
+- How are numbers formatted (precision, rounding)?
+- Is the output stable and consistent across runs?
+
+
+Exercise 3 — Iterative Refinement
+---------------------------------
+Prompt:
+    Add a method refineReport(String draft, String feedback, List<Integer> scores) that:
+      - Applies one small, deterministic change per feedback round
+      - Examples:
+          - 'Add pass rate' → append pass rate with threshold 70
+          - 'Make concise' → return a single-line summary
+          - 'Return JSON' → convert report to JSON
+
+Observe:
+- Does each feedback produce a single, clear change?

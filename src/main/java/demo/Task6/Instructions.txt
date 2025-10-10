@@ -1,0 +1,43 @@
+
+## RolePrompting.java
+
+Exercise 1 — No Role (Vague Prompt)
+-----------------------------------
+Start by giving Copilot a prompt with no defined role or context.
+
+Example prompt:
+    Add a method to check these logs.
+
+Observe:
+- What kind of method does Copilot generate?
+- Does it correctly infer what "check" means (validate, filter, or analyze)?
+- How relevant is the output to a Java logging use case?
+
+Exercise 2 — Add a Role (Guided Context)
+----------------------------------------
+Now specify a professional role to influence Copilot’s reasoning and style.
+
+Example prompt:
+    You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
+      - Scans logs for lines containing 'ERROR'
+      - Returns them as a List<String>
+      - Handles null or empty lists gracefully
+
+Goal:
+Observe how defining a role improves focus, tone, and technical quality.
+
+
+Exercise 3 — Explore Other Roles
+--------------------------------
+Experiment with different professional perspectives to see how each shapes Copilot’s response.
+
+Example prompts:
+    You are a Java code reviewer. Suggest improvements for readability.
+    You are a technical writer. Document this method with clear JavaDoc.
+    You are a security engineer. Review this code for vulnerabilities.
+
+Goal:
+Recognize how role-based prompting creates domain-specific outputs —
+from code reviews and documentation to security-focused insights.
+
+---

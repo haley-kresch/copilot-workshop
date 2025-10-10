@@ -1,6 +1,4 @@
-package demo;
-
-import java.util.Arrays;
+package demo.Task7;
 
 /**
  * ChainOfThought

@@ -1,0 +1,57 @@
+
+## NegativePrompting.java
+
+
+Exercise 1 — Vague Prompt
+-------------------------
+Prompt:
+    Add a method to generate a report from scores.
+
+Observe:
+- Copilot may include unwanted formatting, excessive comments, or redundant information.
+- Output may mix return values and printing inconsistently.
+- Note whether it produces a clean, professional report format.
+
+
+Exercise 2 — Positive Guidance
+-------------------------------
+Prompt:
+    Add a method generateReport(List<Integer> scores) that:
+      - Includes student count, average, min, and max
+      - Formats clearly for managers
+
+Observe:
+- Does Copilot follow formatting guidance and present results clearly?
+- Are numeric calculations correct and consistent?
+- Check for readability and structure of the report.
+
+
+Exercise 3 — Negative Prompting
+-------------------------------
+Prompt:
+    Modify generateReport so it avoids:
+      - Using abbreviations like 'avg' or 'cnt'
+      - Printing unnecessary debug info
+      - Including raw lists of scores unless requested
+      - Adding redundant explanations
+
+Observe:
+- Does Copilot correctly suppress undesired elements?
+- Are instructions followed precisely without introducing new errors?
+- Note how negative prompts affect style and content focus.
+
+
+Exercise 4 — Combined Prompting
+-------------------------------
+Prompt:
+    Generate documentation for the report method:
+      - Use clear JavaDoc
+      - Avoid verbose language and subjective opinions
+      - Include only parameters and return value explanation
+
+Observe:
+- Is the documentation concise and accurate?
+- Does Copilot follow the combination of positive and negative guidance?
+- Are @param and @return tags clear and complete?
+
+---

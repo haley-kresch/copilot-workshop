@@ -1,7 +1,6 @@
-package demo;
+package demo.Task6;
 
 import java.util.List;
-import java.util.Arrays;
 
 
 /**

@@ -90,53 +90,6 @@ enables Copilot to produce precise, verifiable code.
 
 ---
 
-## RolePrompting.java
-
-Exercise 1 — No Role (Vague Prompt)
------------------------------------
-Start by giving Copilot a prompt with no defined role or context.
-
-Example prompt:
-    Add a method to check these logs.
-
-Observe:
-- What kind of method does Copilot generate?
-- Does it correctly infer what "check" means (validate, filter, or analyze)?
-- How relevant is the output to a Java logging use case?
-
-Goal:
-Notice how the absence of a role leads to generic or unfocused behavior.
-
-
-Exercise 2 — Add a Role (Guided Context)
-----------------------------------------
-Now specify a professional role to influence Copilot’s reasoning and style.
-
-Example prompt:
-    You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
-      - Scans logs for lines containing 'ERROR'
-      - Returns them as a List<String>
-      - Handles null or empty lists gracefully
-
-Goal:
-Observe how defining a role improves focus, tone, and technical quality.
-
-
-Exercise 3 — Explore Other Roles
---------------------------------
-Experiment with different professional perspectives to see how each shapes Copilot’s response.
-
-Example prompts:
-    You are a Java code reviewer. Suggest improvements for readability.
-    You are a technical writer. Document this method with clear JavaDoc.
-    You are a security engineer. Review this code for vulnerabilities.
-
-Goal:
-Recognize how role-based prompting creates domain-specific outputs —
-from code reviews and documentation to security-focused insights.
-
----
-
 ## FewShot.java
 
 Exercise 1 — Single Example (Vague)
@@ -167,54 +120,6 @@ Observe:
 - Does Copilot infer the pattern correctly?
 - Does it format the code consistently?
 - How does it handle additional examples or edge cases?
-
----
-
-## ChainOfThought.java
-
-Exercise 1 — Vague Prompt
--------------------------
-Give Copilot a minimal, vague instruction.
-
-Example prompt:
-    Add a method to calculate factorial.
-
-Observe:
-- Copilot may only return the final result with no explanation.
-- Note whether it chooses an iterative or recursive approach.
-- Check how it handles edge cases (n == 0, negative n) — are they addressed?
-
-
-Exercise 2 — Ask for Reasoning (Clarity)
-----------------------------------------
-Make the prompt explicit about wanting step-by-step output.
-
-Example prompt:
-    Add a method computeFactorialWithSteps(int n) that:
-      - Prints each multiplication step
-      - Returns the final result
-
-Observe:
-- Does Copilot include the requested step-printing and still return the correct value?
-- Does the implementation mix side effects and return values cleanly or awkwardly?
-- Verify behavior on small and boundary inputs (0, 1, negative numbers).
-
-
-Exercise 3 — Full Explanation / Chain-of-Thought Style
------------------------------------------------------
-Request detailed, intermediate explanation and visible calculations.
-
-Example prompt:
-    Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
-      - Explains discriminant calculation step by step
-      - Shows intermediate values (discriminant, sqrt, numerator/denominator)
-      - Returns an array of real roots (empty array if roots are complex)
-
-Observe:
-- Is the explanation produced as console output, comments, or both?
-- Are intermediate values computed and displayed accurately?
-- How does Copilot handle complex roots or invalid input (a == 0)?
-- Note whether the explanations are precise enough to be unit-tested or if they’re informal.
 
 ---
 
@@ -256,7 +161,6 @@ Prompt:
 
 Observe:
 - Does each feedback produce a single, clear change?
-- Is behavior deterministic and testable (no randomness or hidden state)?
 - How does it handle ambiguous, conflicting, or unsupported feedback?
 
 
@@ -329,3 +233,96 @@ Observe:
 - Does Copilot follow the combination of positive and negative guidance?
 - Are @param and @return tags clear and complete?
 
+---
+
+
+## RolePrompting.java
+
+Exercise 1 — No Role (Vague Prompt)
+-----------------------------------
+Start by giving Copilot a prompt with no defined role or context.
+
+Example prompt:
+    Add a method to check these logs.
+
+Observe:
+- What kind of method does Copilot generate?
+- Does it correctly infer what "check" means (validate, filter, or analyze)?
+- How relevant is the output to a Java logging use case?
+
+Exercise 2 — Add a Role (Guided Context)
+----------------------------------------
+Now specify a professional role to influence Copilot’s reasoning and style.
+
+Example prompt:
+    You are a senior DevOps Engineer. Add a method named findErrors(List<String> logs) that:
+      - Scans logs for lines containing 'ERROR'
+      - Returns them as a List<String>
+      - Handles null or empty lists gracefully
+
+Goal:
+Observe how defining a role improves focus, tone, and technical quality.
+
+
+Exercise 3 — Explore Other Roles
+--------------------------------
+Experiment with different professional perspectives to see how each shapes Copilot’s response.
+
+Example prompts:
+    You are a Java code reviewer. Suggest improvements for readability.
+    You are a technical writer. Document this method with clear JavaDoc.
+    You are a security engineer. Review this code for vulnerabilities.
+
+Goal:
+Recognize how role-based prompting creates domain-specific outputs —
+from code reviews and documentation to security-focused insights.
+
+---
+
+## ChainOfThought.java
+
+Exercise 1 — Vague Prompt
+-------------------------
+Give Copilot a minimal, vague instruction.
+
+Example prompt:
+    Add a method to calculate factorial.
+
+Observe:
+- Copilot may only return the final result with no explanation.
+- Note whether it chooses an iterative or recursive approach.
+- Check how it handles edge cases (n == 0, negative n) — are they addressed?
+
+
+Exercise 2 — Ask for Reasoning (Clarity)
+----------------------------------------
+Make the prompt explicit about wanting step-by-step output.
+
+Example prompt:
+    Add a method computeFactorialWithSteps(int n) that:
+      - Prints each multiplication step
+      - Returns the final result
+
+Observe:
+- Does Copilot include the requested step-printing and still return the correct value?
+- Does the implementation mix side effects and return values cleanly or awkwardly?
+- Verify behavior on small and boundary inputs (0, 1, negative numbers).
+
+
+Exercise 3 — Full Explanation / Chain-of-Thought Style
+-----------------------------------------------------
+Request detailed, intermediate explanation and visible calculations.
+
+Example prompt:
+    Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
+      - Explains discriminant calculation step by step
+      - Shows intermediate values (discriminant, sqrt, numerator/denominator)
+      - Returns an array of real roots (empty array if roots are complex)
+
+Observe:
+- Is the explanation produced as console output, comments, or both?
+- Are intermediate values computed and displayed accurately?
+- How does Copilot handle complex roots or invalid input (a == 0)?
+- Note whether the explanations are precise enough to be unit-tested or if they’re informal.
+
+---

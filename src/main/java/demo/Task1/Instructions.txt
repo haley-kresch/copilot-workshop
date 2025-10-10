@@ -1,0 +1,40 @@
+## Clarity.java
+
+Exercise 1 — Vague Prompt (Low Clarity)
+---------------------------------------
+Give Copilot a vague instruction related to the existing class.
+
+Example prompt:
+    Add a method that works with the student name.
+
+Observe:
+- What kind of method does Copilot generate?
+
+(You don’t need to keep this version — the goal is to see how ambiguity leads to unpredictable results.)
+
+
+Exercise 2 — Add Clarity
+-------------------------
+Refine your prompt to be unambiguous about inputs, outputs, and purpose, while still simple.
+
+Example prompt:
+    Add a method named createPersonalGreeting that returns a String message saying
+    'Welcome, <studentName>!' without printing anything.
+
+
+(Now you’ll see how clear instructions produce a predictable, reusable method.)
+
+
+Exercise 3 — Add Specificity (Context + Format + Constraints)
+-------------------------------------------------------------
+Now make your prompt fully specific — include constraints, formatting details, and style.
+
+Example prompt:
+    Add a static method named summarizeGreetings(List<Clarity> students) that:
+      - Returns a single String with all students’ names joined by commas
+      - Returns 'No students found' if the list is null or empty
+      - Uses Java Streams for the operation
+      - Includes JavaDoc with @param and @return tags
+      - Has no side effects (no printing to console)
+
+---

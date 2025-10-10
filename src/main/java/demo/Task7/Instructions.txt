@@ -1,0 +1,46 @@
+## ChainOfThought.java
+
+Exercise 1 — Vague Prompt
+-------------------------
+Give Copilot a minimal, vague instruction.
+
+Example prompt:
+    Add a method to calculate factorial.
+
+Observe:
+- Copilot may only return the final result with no explanation.
+- Note whether it chooses an iterative or recursive approach.
+- Check how it handles edge cases (n == 0, negative n) — are they addressed?
+
+
+Exercise 2 — Ask for Reasoning (Clarity)
+----------------------------------------
+Make the prompt explicit about wanting step-by-step output.
+
+Example prompt:
+    Add a method computeFactorialWithSteps(int n) that:
+      - Prints each multiplication step
+      - Returns the final result
+
+Observe:
+- Does Copilot include the requested step-printing and still return the correct value?
+- Does the implementation mix side effects and return values cleanly or awkwardly?
+
+
+Exercise 3 — Full Explanation / Chain-of-Thought Style
+-----------------------------------------------------
+Request detailed, intermediate explanation and visible calculations.
+
+Example prompt:
+    Add a method solveQuadraticWithExplanation(double a, double b, double c) that:
+      - Explains discriminant calculation step by step
+      - Shows intermediate values (discriminant, sqrt, numerator/denominator)
+      - Returns an array of real roots (empty array if roots are complex)
+
+Observe:
+- Is the explanation produced as console output, comments, or both?
+- Are intermediate values computed and displayed accurately?
+- How does Copilot handle complex roots or invalid input (a == 0)?
+- Note whether the explanations are precise enough to be unit-tested or if they’re informal.
+
+---
