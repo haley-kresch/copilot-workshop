@@ -1,24 +1,4 @@
-Copilot Agent Foundation - Trainer instructions
-==============================================
-
-Overview
---------
-
-This package contains a small Java class, `CopilotAgentFoundation`, designed as a
-foundation for an interactive Copilot Agent training activity. The goal is to
-show how Copilot's Agent mode can:
-
-- Add new files to the project
-- Implement missing functionality
-- Generate unit tests
-- Run commands in the terminal (e.g. build or test)
-
-What you (the trainee) should do
---------------------------------
-
-Follow the exercises below by prompting Copilot in Agent mode. You should not
-start from scratch — use the existing `CopilotAgentFoundation` class as the
-foundation for each task.
+Follow the exercises below by prompting Copilot in Agent mode.
 
 Suggested exercises
 -------------------
@@ -26,14 +6,10 @@ Suggested exercises
 1. Implement multiplication
    - Ask Copilot Agent to implement `multiply(int a, int b)` in
      `agent.CopilotAgentFoundation` so it correctly returns the product.
-   - Example prompt: "Implement the multiply method in agent.CopilotAgentFoundation
-     and add unit tests that verify it with positive, negative, and zero values."
 
 2. Add tests
    - Ask Copilot Agent to add JUnit tests under `src/test/java/agent/` for
      `add`, `multiply`, and `divide` (include a division-by-zero test).
-   - Example prompt: "Create a JUnit 5 test class agent.CopilotAgentFoundationTest
-     that covers add, multiply, and divide (including division-by-zero)."
 
 3. Create a small CLI or helper class
    - Ask Copilot Agent to add a new file `agent/AdvancedCalculator.java` that
