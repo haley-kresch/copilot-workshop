@@ -1,57 +1,27 @@
 
 ## NegativePrompting.java
 
+Example: Add a method to generate a report
 
-Exercise 1 — Vague Prompt
--------------------------
-Prompt:
+Vague Prompt:
     Add a method to generate a report from scores.
 
-Observe:
-- Copilot may include unwanted formatting, excessive comments, or redundant information.
-- Output may mix return values and printing inconsistently.
-- Note whether it produces a clean, professional report format.
+Negative Prompting Example::
+        Add a method generateReport(List<Integer> scores) that:
+          - Includes student count, average, min, and max
+          - Formats clearly for managers
+          Make sure it avoids:
+                - Using abbreviations like 'avg' or 'cnt'
+                - Printing unnecessary debug info
+                - Including raw lists of scores unless requested
+                - Adding redundant explanations
 
 
-Exercise 2 — Positive Guidance
--------------------------------
-Prompt:
-    Add a method generateReport(List<Integer> scores) that:
-      - Includes student count, average, min, and max
-      - Formats clearly for managers
+Your Task: Add a method to generate a summary of the given scores
 
-Observe:
-- Does Copilot follow formatting guidance and present results clearly?
-- Are numeric calculations correct and consistent?
-- Check for readability and structure of the report.
+Part 1: Send in the meeting chat (and try out in Copilot) a vague prompt first
 
+Part 2: Create a prompt that explicitly states what NOT to include, following what you've learned
+ from the Google Slides(feel free to use the example above as a guide).
+ Try it out in Copilot and send it in the meeting chat.
 
-Exercise 3 — Negative Prompting
--------------------------------
-Prompt:
-    Modify generateReport so it avoids:
-      - Using abbreviations like 'avg' or 'cnt'
-      - Printing unnecessary debug info
-      - Including raw lists of scores unless requested
-      - Adding redundant explanations
-
-Observe:
-- Does Copilot correctly suppress undesired elements?
-- Are instructions followed precisely without introducing new errors?
-- Note how negative prompts affect style and content focus.
-
-
-Exercise 4 — Combined Prompting
--------------------------------
-Prompt:
-    Generate documentation for the report method:
-      - Use clear JavaDoc
-      - Avoid verbose language and subjective opinions
-      - Include only parameters and return value explanation
-
-Observe:
-- Is the documentation concise and accurate?
-- Does Copilot follow the combination of positive and negative guidance?
-- Are @param and @return tags clear and complete?
-
----

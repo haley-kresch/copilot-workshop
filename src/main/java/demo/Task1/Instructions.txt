@@ -1,35 +1,12 @@
 ## Clarity.java
 
-Exercise 1 — Vague Prompt (Low Clarity)
----------------------------------------
-Give Copilot a vague instruction related to the existing class.
+Example: Create a method that summarizes greetings for a list of students
 
-Example prompt:
-    Add a method that works with the student name.
-
-Observe:
-- What kind of method does Copilot generate?
-
-(You don’t need to keep this version — the goal is to see how ambiguity leads to unpredictable results.)
+Vague prompt:
+    Add a method that summarizes greetings
 
 
-Exercise 2 — Add Clarity
--------------------------
-Refine your prompt to be unambiguous about inputs, outputs, and purpose, while still simple.
-
-Example prompt:
-    Add a method named createPersonalGreeting that returns a String message saying
-    'Welcome, <studentName>!' without printing anything.
-
-
-(Now you’ll see how clear instructions produce a predictable, reusable method.)
-
-
-Exercise 3 — Add Specificity (Context + Format + Constraints)
--------------------------------------------------------------
-Now make your prompt fully specific — include constraints, formatting details, and style.
-
-Example prompt:
+Specific, clear prompt:
     Add a static method named summarizeGreetings(List<Clarity> students) that:
       - Returns a single String with all students’ names joined by commas
       - Returns 'No students found' if the list is null or empty
@@ -38,3 +15,14 @@ Example prompt:
       - Has no side effects (no printing to console)
 
 ---
+
+Your Task:
+
+Add a method to this class to greet a student, with the greeting being
+specific to the time of day (morning, afternoon, evening).
+
+Part 1: Send in the meeting chat (and try out in Copilot) a vague prompt first
+
+Part 2: Create a more specific, clear prompt, following what you've learned from the Google Slide
+        (feel free to use the example above as a guide). Try it out in Copilot and send it in the meeting chat.
+

@@ -1,35 +1,11 @@
 ## Context.java
 
-Exercise 1 — Minimal Context (Vague)
-------------------------------------
-Give Copilot almost no context so it must infer your intent.
+Example: Create a method to calculate the pass rate
 
-Example prompt:
+Vague prompt:
     Add a method to process scores.
 
-Observe:
-- What kind of method does Copilot create? (Does it sort, print, average, or transform?)
-
-Goal:
-Recognize how lack of context leads to unpredictable or inconsistent results.
-
-
-Exercise 2 — Add Explicit Context
----------------------------------
-Now add clear information about the domain (education), audience (teachers), and task.
-
-Example prompt:
-    Add a method for teachers that calculates the class average from a list of student scores.
-
-Goal:
-See how adding domain and task context guides Copilot toward a consistent and relevant solution.
-
-
-Exercise 3 — Add Context + Background
--------------------------------------
-Finally, make your prompt fully explicit — include background data, assumptions, and constraints.
-
-Example prompt:
+A prompt with context:
     Add a static method named calculatePassRate(List<Integer> scores) that:
       - Uses a passing threshold of 70
       - Returns a double between 0.0 and 1.0 representing the ratio of students passing
@@ -37,8 +13,13 @@ Example prompt:
       - Includes JavaDoc with @param and @return tags
       - Has deterministic, testable behavior (no randomness or side effects)
 
-Goal:
-Observe how adding explicit CONTEXT (domain, purpose) and BACKGROUND (data, assumptions)
-enables Copilot to produce precise, verifiable code.
-
 ---
+
+Your Task:
+
+Add a method to this class to take a list of scores and come up with a short text report summarizing the scores
+
+Part 1: Send in the meeting chat (and try out in Copilot) a vague prompt first
+
+Part 2: Create a prompt with context, following what you've learned from the Google Slide
+        (feel free to use the example above as a guide). Try it out in Copilot and send it in the meeting chat.

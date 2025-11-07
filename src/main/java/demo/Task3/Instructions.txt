@@ -1,32 +1,22 @@
 ## FewShot.java
 
-Exercise 1 — Single Example (Vague)
------------------------------------
-Prompt Copilot with just one minimal example.
+Example: Map country codes to country names
 
-Example prompt:
-Add a method named `getFullName` that returns 'United States' if the input is 'US'.
+Vague Prompt:
+    Add a method to map country codes to country names.
 
-Observe:
-- How well does Copilot generalize from a single example?
-- Does it infer other mappings automatically?
-- Are the naming and structure consistent with your expectations?
-
-
-Exercise 2 — Multiple Consistent Examples
------------------------------------------
-Provide several examples with clear, consistent formatting to guide Copilot’s pattern recognition.
-
-Example prompt:
-    Add a method that maps:
+Few-Shot Prompt:
+    Add a method named `getCountryName` that maps:
       'US' → 'United States'
       'FR' → 'France'
       'JP' → 'Japan'
-    Then extend the mapping for other codes.
-
-Observe:
-- Does Copilot infer the pattern correctly?
-- Does it format the code consistently?
-- How does it handle additional examples or edge cases?
+    Then extend the mapping for other country codes.
 
 ---
+
+Your Task: Add a method to see if a given country exists in the map
+
+Part 1: Send in the meeting chat (and try out in Copilot) a vague prompt first
+
+Part 2: Create a prompt with examples, following what you've learned from the Google Slide
+         (feel free to use the example above as a guide). Try it out in Copilot and send it in the meeting chat.
