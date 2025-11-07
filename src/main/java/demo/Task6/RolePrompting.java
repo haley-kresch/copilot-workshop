@@ -5,15 +5,6 @@ import java.util.List;
 
 /**
  * RolePrompting
- *
- * Focus: ROLE PROMPTING with GitHub Copilot in IntelliJ.
- *
- * ➡️ Assigning Copilot a role improves tone, style, and relevance.
- * ➡️ Helps control domain focus and reduce irrelevant output.
- * ➡️ Useful for debugging, code review, documentation, and simulation.
- *
- * Students should experiment with role-based prompts and compare
- * Copilot’s behavior when roles are explicit vs. implicit.
  */
 public class RolePrompting {
 

@@ -5,16 +5,6 @@ import java.util.List;
 
 /**
  * Context
- *
- * Focus: Using CONTEXT and BACKGROUND in prompt engineering with Copilot.
- *
- * ➡️ Context = domain, audience, task details
- * ➡️ Background = relevant data, assumptions, prior steps
- *
- * Explicit context + background = deterministic, testable outputs.
- *
- * Students should experiment with adding clarity and background info
- * to prompts, and compare Copilot’s output quality.
  */
 public class Context {
 
